@@ -1,14 +1,33 @@
 Author: Ryan Watkins
+
 Email: rdwatkin@ucsc.edu
 
-To build: 
+Build:
+
 "make"
 
-To run:
-"./httpserver hostname [portname] -a mappingFile [-N threadNum] [-l logFile]"
-Note: if you omit portname, it will default to port 80
+Run:
+
+"./httpserver hostname -a mappingFile
+
+Options:
+
+
+[portname] - Define the port to be used at runtime, default is 80
+
+
+[-N threadNum] - Define the number of threads to be created at runtime, default is 4
+
+
+[-l logFileName] - Specify actions should be logged to logFileName
+
 
 Supported Commands:
 PATCH
 GET
 PUT
+
+
+Tested with curl and netcat to send HTTP requests
+
+Note: Directories not supported and filenames must be 27 characters long
